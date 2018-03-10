@@ -1,0 +1,29 @@
+AllCops:
+  Include:
+    - !ruby/regexp /\.rb$/
+  Exclude:
+    - 'spec/fixtures/**/*'
+    - 'spec/cassettes/**/*'
+    - 'vendor/**/*'
+    - 'config/**/*'
+    - 'db/**/*'
+    - 'bin/*'
+    - 'Gemfile'
+    - 'Gemfile.lock'
+    - 'Rakefile'
+    - 'Guardfile'
+    - 'lib/bionic/cli/template/**/*'
+    - 'bin/*'
+    - 'exe/*'
+  TargetRubyVersion: 2.5
+Documentation:
+  Enabled: false
+LineLength:
+  Exclude:
+    - spec/**/*
+  Max: 120
+BlockLength:
+  Exclude:
+    - spec/**/*
+Metrics/AbcSize:
+  Max: 25
