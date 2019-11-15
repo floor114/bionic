@@ -14,7 +14,8 @@ module Bionic
         @autoload_files = [
           root.join('app/handlers/**/*.rb'),
           root.join('app/models/**/*.rb'),
-          root.join('app/services/**/*.rb')
+          root.join('app/services/**/*.rb'),
+          root.join('lib/tasks/**/*.rake')
         ].flat_map { |dir| Dir[dir].sort }
         @config_files = { database: 'config/database.yml', i18n: Dir['config/locales/*.yml'] }
         @log_files = { database: 'log/database.log' }
